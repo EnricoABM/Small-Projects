@@ -1,8 +1,10 @@
 # File Organizer
 
+[<<< Back the home](/README.md)
+
 ## Project Description
 
-This is a simply project created using `os` module from python 3.11 to organize files.
+A project created using `os` module from python 3.11 to organize files.
 
 This project consists of a script to organize files in a directory, based on files extensions (file.ext), for each extension a directory will be created, and all files will be moved to their respective folder.
 
@@ -24,5 +26,7 @@ To test the script, the `create_random_files` module creates some files to test 
 
 | Files | Link |
 |-------|------|
-| File Organizer | [Go to](files/file_organizer.py) |
-| Create Aleatory Files | [Go to](files/create_aleartory_files.py) |
+| file_organizer.py | [Go to file](files/file_organizer.py) |
+| create_aleatory_files.py | [Go to file](files/create_aleartory_files.py) |
+
+---
