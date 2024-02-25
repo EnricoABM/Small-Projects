@@ -1,8 +1,8 @@
 """ Module to organize files in a diretory"""
 
+from argparse import ArgumentParser
 import os
 import shutil
-import sys
 
 
 class Organizer:
@@ -73,19 +73,26 @@ class Organizer:
 
 
 if '__main__' == __name__:
-    if len(sys.argv) > 1:
-        try:
-            arguments = sys.argv[1:]
-            path = arguments[0]
-            new_files_prefix = arguments[1]
-            file_organizar = Organizer(
-                path=path,
-                new_files_prefix=new_files_prefix
-                )
-        except IndexError:
-            file_organizar = Organizer(
-                path=path)
-    else:
-        file_organizar = Organizer()
-    file_organizar.create_dirs()
-    file_organizar.move_files()
+    args_parser = ArgumentParser()
+    args_parser.add_argument(
+        '-n', '--name',
+        help='Files prefix name',
+        type=str,
+        default='file',
+    )
+
+    args_parser.add_argument(
+        '-p', '--path',
+        help='Dir path with all files to organize',
+        type=str,
+        default='.',
+    )
+
+    args = args_parser.parse_args()
+    print(args.name)
+    file_organizer = Organizer(
+        path=args.name,
+        new_files_prefix=args.path
+    )
+    file_organizer.create_dirs()
+    file_organizer.move_files()
