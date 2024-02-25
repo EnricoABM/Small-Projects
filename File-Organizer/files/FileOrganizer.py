@@ -78,21 +78,21 @@ if '__main__' == __name__:
         '-n', '--name',
         help='Files prefix name',
         type=str,
-        default='file',
+        default='files',
     )
 
     args_parser.add_argument(
         '-p', '--path',
         help='Dir path with all files to organize',
         type=str,
-        default='.',
+        default=os.path.abspath('.'),
     )
 
     args = args_parser.parse_args()
     print(args.name)
     file_organizer = Organizer(
-        path=args.name,
-        new_files_prefix=args.path
+        path=args.path,
+        new_files_prefix=args.name
     )
     file_organizer.create_dirs()
     file_organizer.move_files()

@@ -1,7 +1,7 @@
 """ This module is for testing the file organizer"""
 
 from itertools import product
-import os
+from pathlib import Path
 
 
 def create_aleartory_files(path: str = 'files'):
@@ -19,6 +19,10 @@ def create_aleartory_files(path: str = 'files'):
                   'todo_list', 'contact_directory']
 
     for file, ext in product(files_name, extension):
-        example_dir_files = os.path.join(path, file + '.' + ext)
-        with open(example_dir_files, 'a'):
-            ...
+        example_dir_files = Path(path) / (file + '.' + ext)
+        print(example_dir_files)
+        example_dir_files.touch()
+
+
+if __name__ == "__main__":
+    create_aleartory_files()
