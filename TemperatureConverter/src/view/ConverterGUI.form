@@ -28,17 +28,17 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="resultLbl" min="-2" max="-2" attributes="0"/>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="tempTxt" min="-2" pref="117" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="celsiusLbl" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="temperaturesCB" min="-2" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="resultLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="tempTxt" alignment="0" min="-2" pref="117" max="-2" attributes="0"/>
                   <Component id="converterBtn" alignment="0" min="-2" pref="111" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="0" pref="35" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="temp1CB" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="celsiusLbl" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="temp2CB" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="22" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -48,8 +48,9 @@
               <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="tempTxt" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="temp2CB" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="temp1CB" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="celsiusLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="temperaturesCB" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="resultLbl" min="-2" max="-2" attributes="0"/>
@@ -83,11 +84,6 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tempTxtActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="celsiusLbl">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Celsius to"/>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JLabel" name="resultLbl">
       <Properties>
         <Property name="text" type="java.lang.String" value="Result "/>
@@ -101,18 +97,39 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="converterBtnActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JComboBox" name="temperaturesCB">
+    <Component class="javax.swing.JComboBox" name="temp2CB">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="2">
-            <StringItem index="0" value="Farenheit"/>
-            <StringItem index="1" value="Kelvin"/>
+          <StringArray count="3">
+            <StringItem index="0" value="Celsius"/>
+            <StringItem index="1" value="Farenheit"/>
+            <StringItem index="2" value="Kelvin"/>
+          </StringArray>
+        </Property>
+        <Property name="selectedIndex" type="int" value="1"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="temp1CB">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="3">
+            <StringItem index="0" value="Celsius"/>
+            <StringItem index="1" value="Farenheit"/>
+            <StringItem index="2" value="Kelvin"/>
           </StringArray>
         </Property>
       </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="celsiusLbl">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="to"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>
