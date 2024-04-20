@@ -34,7 +34,7 @@
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="celsiusLbl" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="temp2CB" min="-2" max="-2" attributes="0"/>
+                      <Component id="temperaturesCB" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Component id="converterBtn" alignment="0" min="-2" pref="111" max="-2" attributes="0"/>
               </Group>
@@ -49,7 +49,7 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="tempTxt" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="celsiusLbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="temp2CB" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="temperaturesCB" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="resultLbl" min="-2" max="-2" attributes="0"/>
@@ -101,7 +101,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="converterBtnActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JComboBox" name="temp2CB">
+    <Component class="javax.swing.JComboBox" name="temperaturesCB">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="2">

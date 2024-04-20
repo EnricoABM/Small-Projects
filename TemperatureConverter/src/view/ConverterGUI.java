@@ -24,7 +24,7 @@ public class ConverterGUI extends javax.swing.JFrame {
         celsiusLbl = new javax.swing.JLabel();
         resultLbl = new javax.swing.JLabel();
         converterBtn = new javax.swing.JButton();
-        temp2CB = new javax.swing.JComboBox<>();
+        temperaturesCB = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Temperature Converter");
@@ -60,7 +60,7 @@ public class ConverterGUI extends javax.swing.JFrame {
             }
         });
 
-        temp2CB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Farenheit", "Kelvin" }));
+        temperaturesCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Farenheit", "Kelvin" }));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -75,7 +75,7 @@ public class ConverterGUI extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(celsiusLbl)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(temp2CB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(temperaturesCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(converterBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 35, Short.MAX_VALUE))
         );
@@ -86,7 +86,7 @@ public class ConverterGUI extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tempTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(celsiusLbl)
-                    .addComponent(temp2CB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(temperaturesCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(resultLbl)
                 .addGap(14, 14, 14)
@@ -98,10 +98,10 @@ public class ConverterGUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void tempTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tempTxtActionPerformed
-        String temp = controller.ConverterController.converter(tempTxt.getText(), temp2CB.getSelectedItem().toString());
-        if (temp2CB.getSelectedItem().toString().equals("Farenheit"))
+        String temp = controller.ConverterController.converter(tempTxt.getText(), temperaturesCB.getSelectedItem().toString());
+        if (temperaturesCB.getSelectedItem().toString().equals("Farenheit"))
             resultLbl.setText("Result " + temp + " °F");
-        else if (temp2CB.getSelectedItem().toString().equals("Kelvin"))
+        else if (temperaturesCB.getSelectedItem().toString().equals("Kelvin"))
             resultLbl.setText("Result " + temp + " K");
     }//GEN-LAST:event_tempTxtActionPerformed
 
@@ -123,10 +123,10 @@ public class ConverterGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_tempTxtFocusLost
 
     private void converterBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_converterBtnActionPerformed
-        String temp = controller.ConverterController.converter(tempTxt.getText(), temp2CB.getSelectedItem().toString());
-        if (temp2CB.getSelectedItem().toString().equals("Farenheit"))
+        String temp = controller.ConverterController.converter(tempTxt.getText(), temperaturesCB.getSelectedItem().toString());
+        if (temperaturesCB.getSelectedItem().toString().equals("Farenheit"))
             resultLbl.setText("Result " + temp + " °F");
-        else if (temp2CB.getSelectedItem().toString().equals("Kelvin"))
+        else if (temperaturesCB.getSelectedItem().toString().equals("Kelvin"))
             resultLbl.setText("Result " + temp + " K");
     }//GEN-LAST:event_converterBtnActionPerformed
 
@@ -169,8 +169,8 @@ public class ConverterGUI extends javax.swing.JFrame {
     private javax.swing.JLabel celsiusLbl;
     private javax.swing.JButton converterBtn;
     private javax.swing.JLabel resultLbl;
-    private javax.swing.JComboBox<String> temp2CB;
     private javax.swing.JTextField tempTxt;
+    private javax.swing.JComboBox<String> temperaturesCB;
     // End of variables declaration//GEN-END:variables
 
     private void setIconImage() {
